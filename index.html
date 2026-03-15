@@ -1,0 +1,226 @@
+export default function SilasPortfolioWebsite() { const services = [ { title: "Klaviyo Email Marketing", description: "Email flows and lifecycle automation designed to improve retention, recover abandoned revenue, and support repeat purchases for Shopify brands.", items: [ "Welcome series", "Abandoned cart recovery", "Browse abandonment", "Post-purchase flows", ], }, { title: "Shopify Store Optimization", description: "Practical store improvements focused on conversion clarity, customer trust, and a better mobile and desktop buying experience.", items: [ "Product page improvement", "Conversion optimization", "Store audit review", "Mobile UX refinement", ], }, { title: "Shopify SEO Support", description: "Foundational SEO support to improve search readiness, technical structure, and overall store visibility.", items: [ "Meta title and description review", "Technical SEO checks", "Search visibility support", "Structured data guidance", ], }, ];
+
+const process = [ "Review the store and identify priority issues", "Highlight the most important conversion and retention gaps", "Recommend practical next steps", "Implement and refine where required", ];
+
+const scorecards = [ { title: "Retention Review", score: "82%", note: "Focused on lifecycle follow-up, recovery opportunities, and repeat-purchase potential.", }, { title: "Conversion Review", score: "76%", note: "Focused on trust, clarity, product-page structure, and buying experience.", }, { title: "Technical Review", score: "71%", note: "Focused on SEO readiness, analytics coverage, and store-growth fundamentals.", }, ];
+
+const industries = [ "Fashion and apparel", "Electronics", "Home and garden", "General ecommerce", "New Shopify brands", "Stores already running ads", ];
+
+const flowSteps = [ { title: "Trigger", text: "Signup or popup submission" }, { title: "Welcome Email", text: "Brand introduction and first offer" }, { title: "Reminder Email", text: "Product highlight and follow-up" }, { title: "Branch", text: "Purchased: post-purchase flow | Not purchased: recovery sequence" }, ];
+
+const beforeAfter = [ { label: "Before", title: "Basic Setup", bullets: [ "Traffic arrives without a structured follow-up system", "Limited email recovery in place", "Weak trust signals on important pages", ], }, { label: "After", title: "Improved Setup", bullets: [ "Clearer email capture and lifecycle automation", "Better customer journey and conversion structure", "Stronger retention and repeat-purchase opportunities", ], }, ];
+
+const primaryWhatsapp = "https://wa.me/447407097227"; const secondaryWhatsapp = "https://wa.me/2349130775567"; const auditImage = "/mnt/data/a_set_of_three_digital_screenshots_displays_e_comm.png";
+
+return ( <div className="min-h-screen bg-slate-950 text-white"> <section className="relative overflow-hidden border-b border-white/10"> <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(34,211,238,0.12),transparent_28%),radial-gradient(circle_at_top_right,rgba(99,102,241,0.12),transparent_26%),linear-gradient(180deg,#020617_0%,#0f172a_100%)]" /> <div className="relative mx-auto max-w-7xl px-6 py-16 md:px-10 md:py-24"> <div className="grid items-center gap-10 lg:grid-cols-[1.15fr_0.85fr]"> <div> <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-cyan-300/20 bg-cyan-400/10 px-4 py-2 text-sm text-cyan-200 backdrop-blur"> <span className="h-2 w-2 rounded-full bg-cyan-300" /> Adrian Ecommerce Growth </div> <h1 className="max-w-3xl text-4xl font-bold leading-tight md:text-6xl"> Klaviyo and Shopify support for ecommerce brands that want a more professional customer journey. </h1> <p className="mt-5 max-w-2xl text-base leading-7 text-white/72 md:text-lg"> I am Silas Adrian, founder of Adrian Ecommerce Growth. I help Shopify brands improve retention, recover lost revenue, and strengthen store performance through focused audits, Klaviyo flows, and practical optimization support. </p> <div className="mt-8 flex flex-col gap-3 sm:flex-row"> <a
+href="#services"
+className="rounded-2xl bg-white px-6 py-3 text-center font-semibold text-slate-900 transition hover:scale-[1.02]"
+> View Services </a> <a
+href="#contact"
+className="rounded-2xl border border-white/15 bg-white/5 px-6 py-3 text-center font-semibold text-white transition hover:bg-white/10"
+> Contact </a> </div> </div>
+
+<div className="grid gap-5">
+          <div className="rounded-[2rem] border border-white/10 bg-white/5 p-6 backdrop-blur-xl shadow-2xl shadow-cyan-950/20">
+            <div className="flex items-center gap-5">
+              <div className="flex h-24 w-24 items-center justify-center rounded-full bg-gradient-to-br from-cyan-300 to-indigo-400 text-3xl font-bold text-slate-900 shadow-xl shadow-cyan-500/20">
+                SA
+              </div>
+              <div>
+                <p className="text-sm uppercase tracking-[0.25em] text-cyan-300">Founder</p>
+                <h2 className="mt-2 text-2xl font-bold">Silas Adrian</h2>
+                <p className="mt-2 text-white/68">Klaviyo Email Marketing • Shopify Optimization • Ecommerce Audits</p>
+              </div>
+            </div>
+            <div className="mt-6 rounded-3xl border border-white/10 bg-slate-950/70 p-5">
+              <p className="text-sm text-white/60">Core focus</p>
+              <p className="mt-2 text-lg font-semibold">
+                Supporting Shopify brands with practical retention, conversion, and store-structure improvements.
+              </p>
+            </div>
+          </div>
+          <div className="grid grid-cols-3 gap-4">
+            {[
+              ["Platform", "Shopify"],
+              ["Specialty", "Klaviyo"],
+              ["Approach", "Practical"],
+            ].map(([label, value]) => (
+              <div key={label} className="rounded-3xl border border-white/10 bg-white/5 p-5">
+                <p className="text-sm text-white/55">{label}</p>
+                <p className="mt-2 text-xl font-bold">{value}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" className="mx-auto max-w-7xl px-6 py-16 md:px-10">
+    <div className="max-w-2xl">
+      <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-300">Services</p>
+      <h2 className="mt-3 text-3xl font-bold md:text-4xl">Services for Shopify growth and retention</h2>
+      <p className="mt-4 text-white/70">
+        Clear, focused support for stores that need better email performance, stronger conversion structure, and improved readiness for growth.
+      </p>
+    </div>
+    <div className="mt-10 grid gap-6 md:grid-cols-3">
+      {services.map((service) => (
+        <div key={service.title} className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl shadow-black/10 backdrop-blur">
+          <h3 className="text-xl font-semibold">{service.title}</h3>
+          <p className="mt-3 text-sm leading-6 text-white/72">{service.description}</p>
+          <div className="mt-5 space-y-2">
+            {service.items.map((item) => (
+              <div key={item} className="rounded-2xl bg-slate-900/60 px-4 py-3 text-sm text-white/85">
+                {item}
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section className="mx-auto max-w-7xl px-6 py-4 md:px-10 md:py-8">
+    <div className="grid gap-6 lg:grid-cols-2">
+      <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8 backdrop-blur-xl">
+        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-300">Store audit examples</p>
+        <h2 className="mt-3 text-3xl font-bold">Example audit presentation</h2>
+        <p className="mt-4 leading-7 text-white/72">
+          Example review snapshots showing how store findings can be presented in a clear and professional format.
+        </p>
+        <div className="mt-6 overflow-hidden rounded-3xl border border-white/10 bg-slate-950/70 p-3">
+          <img src={auditImage} alt="Store audit examples" className="w-full rounded-2xl object-cover" />
+        </div>
+      </div>
+
+      <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8 backdrop-blur-xl">
+        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-300">Klaviyo flow example</p>
+        <h2 className="mt-3 text-3xl font-bold">Lifecycle flow structure</h2>
+        <p className="mt-4 leading-7 text-white/72">
+          A simple example of how a welcome and follow-up flow can be structured to guide new subscribers toward purchase and retention.
+        </p>
+        <div className="mt-6 rounded-3xl border border-white/10 bg-slate-950/70 p-6">
+          <div className="space-y-4">
+            {flowSteps.map((step, index) => (
+              <div key={step.title}>
+                <div className="rounded-2xl border border-cyan-300/15 bg-white/5 p-4">
+                  <p className="text-sm uppercase tracking-[0.2em] text-cyan-300">{step.title}</p>
+                  <p className="mt-2 text-white/85">{step.text}</p>
+                </div>
+                {index < flowSteps.length - 1 && <div className="py-2 text-center text-cyan-300">↓</div>}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section className="mx-auto max-w-7xl px-6 py-16 md:px-10">
+    <div className="max-w-2xl">
+      <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-300">Review framework</p>
+      <h2 className="mt-3 text-3xl font-bold md:text-4xl">A structured way to evaluate store readiness</h2>
+    </div>
+    <div className="mt-10 grid gap-6 md:grid-cols-3">
+      {scorecards.map((card) => (
+        <div key={card.title} className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl">
+          <div className="flex items-center justify-between">
+            <h3 className="text-xl font-semibold">{card.title}</h3>
+            <span className="rounded-full bg-cyan-400/15 px-3 py-1 text-sm font-semibold text-cyan-300">{card.score}</span>
+          </div>
+          <p className="mt-4 text-sm leading-6 text-white/72">{card.note}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section className="mx-auto max-w-7xl px-6 py-4 md:px-10 md:py-8">
+    <div className="grid gap-6 lg:grid-cols-2">
+      {beforeAfter.map((item) => (
+        <div key={item.label} className="rounded-[2rem] border border-white/10 bg-white/5 p-8 backdrop-blur-xl">
+          <span
+            className={`rounded-full px-3 py-1 text-xs font-semibold ${
+              item.label === "Before"
+                ? "bg-rose-400/15 text-rose-300"
+                : "bg-emerald-400/15 text-emerald-300"
+            }`}
+          >
+            {item.label}
+          </span>
+          <h2 className="mt-4 text-3xl font-bold">{item.title}</h2>
+          <div className="mt-6 space-y-3">
+            {item.bullets.map((bullet) => (
+              <div key={bullet} className="rounded-2xl bg-slate-900/60 p-4 text-white/82">
+                {bullet}
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section className="mx-auto max-w-7xl px-6 py-16 md:px-10">
+    <div className="grid gap-6 lg:grid-cols-2">
+      <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8 backdrop-blur-xl">
+        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-300">Process</p>
+        <h2 className="mt-3 text-3xl font-bold">How I work</h2>
+        <div className="mt-6 space-y-3">
+          {process.map((step, index) => (
+            <div key={step} className="flex items-start gap-4 rounded-2xl bg-slate-900/60 p-4">
+              <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white text-sm font-bold text-slate-900">
+                {index + 1}
+              </div>
+              <p className="pt-1 text-white/82">{step}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8 backdrop-blur-xl">
+        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-300">Best fit</p>
+        <h2 className="mt-3 text-3xl font-bold">Brands I support</h2>
+        <div className="mt-6 grid gap-3 sm:grid-cols-2">
+          {industries.map((item) => (
+            <div key={item} className="rounded-2xl bg-slate-900/60 p-4 text-white/82">
+              {item}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" className="mx-auto max-w-7xl px-6 pb-20 md:px-10">
+    <div className="rounded-[2rem] border border-cyan-300/20 bg-gradient-to-br from-cyan-400/10 via-slate-900 to-indigo-500/10 p-8 md:p-10">
+      <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-300">Contact</p>
+      <h2 className="mt-3 text-3xl font-bold md:text-4xl">Discuss your store</h2>
+      <p className="mt-4 max-w-2xl text-white/72 leading-7">
+        For Shopify support, Klaviyo setup, or a store review, you can reach out directly on WhatsApp using either contact below.
+      </p>
+      <div className="mt-8 grid gap-4 md:grid-cols-2">
+        <a href={primaryWhatsapp} className="rounded-3xl border border-white/10 bg-white/5 p-5 transition hover:bg-white/10">
+          <p className="text-sm text-white/55">WhatsApp Business</p>
+          <p className="mt-1 text-lg font-semibold">+44 7407 097227</p>
+          <p className="mt-2 text-sm text-cyan-300">Primary contact</p>
+        </a>
+        <a href={secondaryWhatsapp} className="rounded-3xl border border-white/10 bg-white/5 p-5 transition hover:bg-white/10">
+          <p className="text-sm text-white/55">Alternative contact</p>
+          <p className="mt-1 text-lg font-semibold">+234 913 077 5567</p>
+          <p className="mt-2 text-sm text-cyan-300">Secondary contact</p>
+        </a>
+      </div>
+      <div className="mt-6 flex flex-col gap-4 sm:flex-row">
+        <a href={primaryWhatsapp} className="rounded-2xl bg-white px-6 py-3 text-center font-semibold text-slate-900 transition hover:scale-[1.02]">
+          Chat on WhatsApp
+        </a>
+        <a href={secondaryWhatsapp} className="rounded-2xl border border-white/15 bg-white/5 px-6 py-3 text-center font-semibold text-white transition hover:bg-white/10">
+          Use Secondary Number
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+
+); }
