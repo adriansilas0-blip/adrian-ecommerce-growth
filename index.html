@@ -3,110 +3,341 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Adrian Ecommerce Growth</title>
+  <title>Silas Adrian | Adrian E-commerce Growth</title>
   <style>
     * {
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #0b1220;
+      background:
+        radial-gradient(circle at top left, rgba(103, 232, 249, 0.10), transparent 25%),
+        radial-gradient(circle at top right, rgba(99, 102, 241, 0.12), transparent 22%),
+        linear-gradient(180deg, #020617 0%, #0f172a 100%);
       color: #ffffff;
       line-height: 1.6;
     }
 
-    header {
-      background: linear-gradient(135deg, #020617, #1e293b);
-      padding: 70px 20px;
-      text-align: center;
+    a {
+      text-decoration: none;
+      color: inherit;
     }
 
-    header h1 {
-      margin: 0 0 12px;
-      font-size: 40px;
-    }
-
-    header p {
-      margin: 0;
-      color: #cbd5e1;
-      font-size: 18px;
+    img {
+      max-width: 100%;
+      display: block;
     }
 
     .container {
-      max-width: 1050px;
+      width: min(1120px, calc(100% - 32px));
       margin: 0 auto;
-      padding: 40px 20px 60px;
     }
 
-    .card {
-      background: #162033;
+    .section {
+      padding: 72px 0;
+    }
+
+    .hero {
+      padding: 84px 0 56px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(103, 232, 249, 0.10);
+      border: 1px solid rgba(103, 232, 249, 0.20);
+      color: #67e8f9;
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: 50px;
+      line-height: 1.1;
+      margin: 0 0 16px;
+    }
+
+    .hero p {
+      color: #cbd5e1;
+      font-size: 18px;
+      margin: 0 0 24px;
+      max-width: 700px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 26px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 22px;
+      border-radius: 12px;
+      font-weight: bold;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: #ffffff;
+      color: #0f172a;
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.04);
+      color: #ffffff;
+    }
+
+    .btn-whatsapp {
+      background: #22c55e;
+      color: #08110d;
+    }
+
+    .btn:hover {
+      opacity: 0.94;
+      transform: translateY(-1px);
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .stat-card,
+    .panel,
+    .service-card,
+    .score-card,
+    .audit-card,
+    .contact-card,
+    .before-after-card {
+      background: rgba(255,255,255,0.05);
       border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 14px;
-      padding: 28px;
-      margin-bottom: 24px;
+      border-radius: 18px;
+      backdrop-filter: blur(8px);
     }
 
-    h2 {
+    .stat-card {
+      padding: 18px;
+    }
+
+    .stat-card small {
+      display: block;
+      color: #94a3b8;
+      margin-bottom: 6px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .stat-card strong {
+      font-size: 20px;
+    }
+
+    .profile-card {
+      padding: 22px;
+    }
+
+    .profile-top {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+
+    .profile-photo {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid rgba(103, 232, 249, 0.25);
+      background: #1e293b;
+    }
+
+    .photo-placeholder {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      font-weight: bold;
+      background: linear-gradient(135deg, #67e8f9, #818cf8);
+      color: #0f172a;
+      border: 3px solid rgba(103, 232, 249, 0.25);
+    }
+
+    .profile-card h3 {
+      margin: 0 0 6px;
+      font-size: 24px;
+    }
+
+    .muted {
+      color: #94a3b8;
+    }
+
+    .panel {
+      padding: 22px;
+    }
+
+    .section-head {
+      max-width: 780px;
+      margin-bottom: 28px;
+    }
+
+    .section-head span {
+      display: inline-block;
+      color: #67e8f9;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    .section-head h2 {
+      margin: 0 0 10px;
+      font-size: 36px;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: #cbd5e1;
+    }
+
+    .services-grid,
+    .score-grid,
+    .audit-grid,
+    .contact-grid,
+    .before-after-grid {
+      display: grid;
+      gap: 20px;
+    }
+
+    .services-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .score-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .audit-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .contact-grid,
+    .before-after-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .service-card,
+    .score-card,
+    .audit-card,
+    .contact-card,
+    .before-after-card {
+      padding: 24px;
+    }
+
+    .service-card h3,
+    .score-card h3,
+    .audit-card h3,
+    .contact-card h3,
+    .before-after-card h3 {
       margin-top: 0;
       margin-bottom: 12px;
-      font-size: 28px;
+      font-size: 22px;
     }
 
-    p {
-      color: #dbe4f0;
+    .service-card p,
+    .score-card p,
+    .audit-card p,
+    .contact-card p,
+    .before-after-card p {
+      color: #cbd5e1;
+      margin-top: 0;
     }
 
-    ul {
-      padding-left: 20px;
-      color: #dbe4f0;
+    .list {
+      margin: 0;
+      padding-left: 18px;
+      color: #e2e8f0;
     }
 
-    li {
+    .list li {
       margin-bottom: 10px;
     }
 
-    .button {
+    .score-badge {
       display: inline-block;
-      background: #22c55e;
-      color: #08110d;
-      padding: 14px 24px;
-      border-radius: 10px;
-      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(103, 232, 249, 0.12);
+      color: #67e8f9;
+      font-size: 13px;
       font-weight: bold;
-      margin-top: 10px;
-    }
-
-    .button:hover {
-      opacity: 0.92;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
+      margin-bottom: 12px;
     }
 
     .audit-image {
       width: 100%;
-      border-radius: 12px;
-      margin-top: 14px;
+      border-radius: 14px;
       border: 1px solid rgba(255,255,255,0.08);
+      margin-top: 14px;
+      background: #111827;
+    }
+
+    .placeholder-box {
+      width: 100%;
+      min-height: 230px;
+      border-radius: 14px;
+      border: 1px dashed rgba(103, 232, 249, 0.35);
+      background: rgba(255,255,255,0.02);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      color: #94a3b8;
+      margin-top: 14px;
+    }
+
+    .flow-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      align-items: start;
     }
 
     .flow-box {
       background: #0f172a;
       border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 12px;
+      border-radius: 14px;
       padding: 18px;
-      margin-top: 12px;
     }
 
     .flow-step {
-      padding: 14px 16px;
       background: #1e293b;
-      border-radius: 10px;
+      border-radius: 12px;
+      padding: 14px 16px;
       margin-bottom: 12px;
       color: #e2e8f0;
     }
@@ -115,122 +346,367 @@
       text-align: center;
       color: #67e8f9;
       font-size: 22px;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     .label {
       display: inline-block;
-      background: rgba(103, 232, 249, 0.12);
-      color: #67e8f9;
       padding: 6px 10px;
       border-radius: 999px;
-      font-size: 13px;
+      font-size: 12px;
+      font-weight: bold;
       margin-bottom: 10px;
     }
 
+    .label-before {
+      background: rgba(251, 113, 133, 0.14);
+      color: #fda4af;
+    }
+
+    .label-after {
+      background: rgba(52, 211, 153, 0.14);
+      color: #6ee7b7;
+    }
+
+    .floating-wa {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 1000;
+      background: #22c55e;
+      color: #08110d;
+      padding: 14px 18px;
+      border-radius: 999px;
+      font-weight: bold;
+      box-shadow: 0 10px 30px rgba(34, 197, 94, 0.35);
+    }
+
     footer {
-      text-align: center;
-      padding: 30px 20px;
-      background: #020617;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 28px 0 40px;
       color: #94a3b8;
+      text-align: center;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .services-grid,
+      .score-grid,
+      .audit-grid,
+      .contact-grid,
+      .before-after-grid,
+      .flow-wrap,
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero {
+        padding-top: 64px;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .section {
+        padding: 56px 0;
+      }
+
+      .section-head h2 {
+        font-size: 28px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Adrian Ecommerce Growth</h1>
-    <p>Shopify Optimization • Klaviyo Email Marketing • Store Audits</p>
-  </header>
+  <a class="floating-wa" href="https://wa.me/2349130775567" target="_blank">WhatsApp</a>
 
-  <div class="container">
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="badge">Silas Adrian | Adrian E-commerce Growth</div>
+          <h1>Shopify and Klaviyo support for brands that want a cleaner customer journey and stronger retention.</h1>
+          <p>
+            I help Shopify brands improve conversion clarity, recover lost revenue, and build stronger follow-up systems
+            through Klaviyo email marketing, practical store audits, and focused optimization support.
+          </p>
 
-    <div class="card">
-      <span class="label">About</span>
-      <h2>Helping Shopify brands grow with clearer retention and conversion systems</h2>
-      <p>
-        I help Shopify brands improve store performance, recover lost revenue, and strengthen customer retention
-        through Klaviyo email marketing, store audits, and practical optimization support.
-      </p>
+          <div class="hero-buttons">
+            <a class="btn btn-primary" href="#services">View Services</a>
+            <a class="btn btn-secondary" href="#audits">See Audit Examples</a>
+            <a class="btn btn-whatsapp" href="https://wa.me/2349130775567" target="_blank">Chat on WhatsApp</a>
+          </div>
+
+          <div class="stats">
+            <div class="stat-card">
+              <small>Platform</small>
+              <strong>Shopify</strong>
+            </div>
+            <div class="stat-card">
+              <small>Specialty</small>
+              <strong>Klaviyo</strong>
+            </div>
+            <div class="stat-card">
+              <small>Approach</small>
+              <strong>Clean & Premium</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel profile-card">
+          <div class="profile-top">
+            <!-- Replace this placeholder with your photo later -->
+            <div class="photo-placeholder">SA</div>
+
+            <!-- When you upload your photo, use this instead:
+            <img class="profile-photo" src="YOUR-PHOTO-LINK-HERE" alt="Silas Adrian">
+            -->
+
+            <div>
+              <h3>Silas Adrian</h3>
+              <div class="muted">Founder, Adrian E-commerce Growth</div>
+            </div>
+          </div>
+
+          <div class="panel" style="padding:18px;">
+            <div class="muted" style="margin-bottom:8px;">Core focus</div>
+            <strong>Helping ecommerce brands improve retention, conversion structure, and buyer follow-up with a more professional growth setup.</strong>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="grid">
-      <div class="card">
-        <span class="label">Services</span>
-        <h2>What I offer</h2>
-        <ul>
-          <li>Klaviyo email marketing and automation</li>
-          <li>Shopify store optimization</li>
-          <li>Store audit and performance review</li>
-          <li>Conversion-focused recommendations</li>
-        </ul>
+  <section id="services" class="section">
+    <div class="container">
+      <div class="section-head">
+        <span>Services</span>
+        <h2>Services built for Shopify growth and retention</h2>
+        <p>
+          Clear, focused support for stores that need better email performance, stronger customer trust, and a more polished buying experience.
+        </p>
       </div>
 
-      <div class="card">
-        <span class="label">Contact</span>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Klaviyo Email Marketing</h3>
+          <p>Email flows and lifecycle automation designed to improve retention and recover missed revenue opportunities.</p>
+          <ul class="list">
+            <li>Welcome series</li>
+            <li>Abandoned cart recovery</li>
+            <li>Browse abandonment</li>
+            <li>Post-purchase flows</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <h3>Shopify Store Optimization</h3>
+          <p>Practical store improvements focused on conversion clarity, customer trust, and a smoother mobile experience.</p>
+          <ul class="list">
+            <li>Product page improvement</li>
+            <li>Conversion optimization</li>
+            <li>Store structure review</li>
+            <li>Mobile UX refinement</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <h3>Store Audits</h3>
+          <p>Focused reviews that highlight missed growth opportunities and explain what should be improved first.</p>
+          <ul class="list">
+            <li>Retention review</li>
+            <li>Trust and UX review</li>
+            <li>Technical readiness check</li>
+            <li>Priority recommendations</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span>Review framework</span>
+        <h2>A structured way to evaluate store readiness</h2>
+      </div>
+
+      <div class="score-grid">
+        <div class="score-card">
+          <div class="score-badge">82%</div>
+          <h3>Retention Review</h3>
+          <p>Focused on lifecycle follow-up, abandoned revenue recovery, and repeat-purchase opportunities.</p>
+        </div>
+
+        <div class="score-card">
+          <div class="score-badge">76%</div>
+          <h3>Conversion Review</h3>
+          <p>Focused on trust, product page clarity, customer reassurance, and buying experience.</p>
+        </div>
+
+        <div class="score-card">
+          <div class="score-badge">71%</div>
+          <h3>Technical Review</h3>
+          <p>Focused on store-growth fundamentals, analytics readiness, and structural issues that slow performance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="audits" class="section">
+    <div class="container">
+      <div class="section-head">
+        <span>Audit examples</span>
+        <h2>Example store audit presentation</h2>
+        <p>
+          Use your real screenshots here so prospects immediately see the kind of review and analysis you do.
+        </p>
+      </div>
+
+      <div class="audit-grid">
+        <div class="audit-card">
+          <h3>Audit Screenshot 1</h3>
+          <p>Buyer intent or store overview snapshot.</p>
+
+          <!-- Replace placeholder with your uploaded screenshot -->
+          <div class="placeholder-box">Upload your first audit screenshot and replace this box with an image.</div>
+
+          <!-- Example:
+          <img class="audit-image" src="YOUR-AUDIT-IMAGE-1-LINK" alt="Audit Screenshot 1">
+          -->
+        </div>
+
+        <div class="audit-card">
+          <h3>Audit Screenshot 2</h3>
+          <p>Performance, SEO, or growth tool review.</p>
+          <div class="placeholder-box">Upload your second audit screenshot and replace this box with an image.</div>
+        </div>
+
+        <div class="audit-card">
+          <h3>Audit Screenshot 3</h3>
+          <p>Additional store analysis example.</p>
+          <div class="placeholder-box">Upload your third audit screenshot and replace this box with an image.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span>Klaviyo flow example</span>
+        <h2>Simple lifecycle flow structure</h2>
+      </div>
+
+      <div class="flow-wrap">
+        <div class="panel" style="padding:24px;">
+          <p>
+            A simple example of how a welcome and follow-up flow can be structured to move subscribers from signup to purchase and retention.
+          </p>
+
+          <div class="flow-box">
+            <div class="flow-step"><strong>Trigger:</strong> Signup or popup submission</div>
+            <div class="arrow">↓</div>
+            <div class="flow-step"><strong>Welcome Email:</strong> Brand introduction and first offer</div>
+            <div class="arrow">↓</div>
+            <div class="flow-step"><strong>Reminder Email:</strong> Product highlight and follow-up</div>
+            <div class="arrow">↓</div>
+            <div class="flow-step"><strong>Next Step:</strong> Purchase follow-up or recovery sequence</div>
+          </div>
+        </div>
+
+        <div class="panel" style="padding:24px;">
+          <h3 style="margin-top:0;">Flow Screenshot Area</h3>
+          <p class="muted">You said you do not have one yet, so this section works as a clean visual placeholder for now.</p>
+          <div class="placeholder-box">Later, you can replace this with a real Klaviyo flow screenshot.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span>Before and after</span>
+        <h2>How improvement is positioned</h2>
+      </div>
+
+      <div class="before-after-grid">
+        <div class="before-after-card">
+          <div class="label label-before">Before</div>
+          <h3>Basic setup</h3>
+          <ul class="list">
+            <li>Traffic arrives without structured follow-up</li>
+            <li>Limited email recovery in place</li>
+            <li>Weak trust signals on key pages</li>
+          </ul>
+        </div>
+
+        <div class="before-after-card">
+          <div class="label label-after">After</div>
+          <h3>Improved setup</h3>
+          <ul class="list">
+            <li>Clearer email capture and lifecycle automation</li>
+            <li>Better customer journey and conversion structure</li>
+            <li>Stronger retention and repeat-purchase opportunities</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span>Best fit</span>
+        <h2>Brands I support</h2>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card"><h3>New Shopify brands</h3><p>Stores that need a stronger launch structure and clearer follow-up systems.</p></div>
+        <div class="service-card"><h3>Stores running ads</h3><p>Brands already paying for traffic that need better retention and conversion support.</p></div>
+        <div class="service-card"><h3>Growth-focused ecommerce brands</h3><p>Businesses that want a more professional customer journey and clearer optimization priorities.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-head">
+        <span>Contact</span>
         <h2>Discuss your store</h2>
         <p>
           For Shopify support, Klaviyo setup, or a store review, reach out directly on WhatsApp.
         </p>
-        <p><strong>WhatsApp:</strong> +234 913 077 5567</p>
-        <a class="button" href="https://wa.me/2349130775567">Chat on WhatsApp</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <span class="label">Store Audit Example</span>
-      <h2>Example audit presentation</h2>
-      <p>
-        This section shows the style of audit snapshots used to identify store growth gaps and missed opportunities.
-      </p>
-      <img class="audit-image" src="https://i.imgur.com/QK6M1KX.png" alt="Store audit example">
-    </div>
-
-    <div class="card">
-      <span class="label">Klaviyo Flow Example</span>
-      <h2>Lifecycle flow structure</h2>
-      <p>
-        A simple example of how a welcome and follow-up flow can be structured to guide subscribers toward purchase and retention.
-      </p>
-
-      <div class="flow-box">
-        <div class="flow-step"><strong>Trigger:</strong> Signup or popup submission</div>
-        <div class="arrow">↓</div>
-        <div class="flow-step"><strong>Welcome Email:</strong> Brand introduction and first offer</div>
-        <div class="arrow">↓</div>
-        <div class="flow-step"><strong>Reminder Email:</strong> Product highlight and follow-up</div>
-        <div class="arrow">↓</div>
-        <div class="flow-step"><strong>Next Step:</strong> Purchase follow-up or recovery sequence</div>
-      </div>
-    </div>
-
-    <div class="grid">
-      <div class="card">
-        <span class="label">Before</span>
-        <h2>Basic setup</h2>
-        <ul>
-          <li>Traffic arrives without structured follow-up</li>
-          <li>Limited email recovery in place</li>
-          <li>Weak trust signals on important pages</li>
-        </ul>
       </div>
 
-      <div class="card">
-        <span class="label">After</span>
-        <h2>Improved setup</h2>
-        <ul>
-          <li>Clearer email capture and automation</li>
-          <li>Better customer journey and conversion structure</li>
-          <li>Stronger retention and repeat-purchase opportunities</li>
-        </ul>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Primary Contact</h3>
+          <p><strong>WhatsApp:</strong> +234 913 077 5567</p>
+          <a class="btn btn-whatsapp" href="https://wa.me/2349130775567" target="_blank">Chat on WhatsApp</a>
+        </div>
+
+        <div class="contact-card">
+          <h3>Positioning</h3>
+          <p>Silas Adrian | Adrian E-commerce Growth</p>
+          <p class="muted">Shopify Optimization • Klaviyo Email Marketing • Store Audits</p>
+        </div>
       </div>
     </div>
-
-  </div>
+  </section>
 
   <footer>
-    © Adrian Ecommerce Growth
+    © Silas Adrian | Adrian E-commerce Growth
   </footer>
 
 </body>
-</html>
+  </html>
