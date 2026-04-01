@@ -44,7 +44,7 @@
     @keyframes fadeUp {
       from {
         opacity: 0;
-        transform: translateY(18px);
+        transform: translateY(28px);
       }
       to {
         opacity: 1;
@@ -55,11 +55,22 @@
     @keyframes softZoom {
       from {
         opacity: 0;
-        transform: scale(0.985);
+        transform: scale(0.96);
       }
       to {
         opacity: 1;
         transform: scale(1);
+      }
+    }
+
+    @keyframes floatIn {
+      from {
+        opacity: 0;
+        transform: translateY(18px) scale(0.96);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
       }
     }
 
@@ -68,20 +79,20 @@
       padding: 92px 20px;
       background: linear-gradient(135deg, #020617, #1e293b);
       border-bottom: 1px solid rgba(255,255,255,0.08);
-      animation: softZoom 0.8s ease;
+      animation: softZoom 1s ease;
     }
 
     header h1 {
       font-size: 42px;
       margin-bottom: 12px;
-      animation: fadeUp 0.8s ease;
+      animation: fadeUp 1s ease;
     }
 
     header p {
       color: #cbd5e1;
       max-width: 760px;
       margin: 0 auto;
-      animation: fadeUp 1s ease;
+      animation: fadeUp 1.2s ease;
     }
 
     .card {
@@ -92,15 +103,26 @@
       border: 1px solid rgba(255,255,255,0.08);
       box-shadow: 0 10px 30px rgba(0,0,0,0.18);
       transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
-      animation: fadeUp 0.7s ease both;
+      animation: floatIn 0.9s ease both;
       backdrop-filter: blur(8px);
     }
 
     .card:hover {
-      transform: translateY(-4px);
+      transform: translateY(-6px);
       box-shadow: 0 18px 40px rgba(0,0,0,0.28);
       border-color: rgba(103,232,249,0.22);
     }
+
+    .card:nth-of-type(1) { animation-delay: 0.05s; }
+    .card:nth-of-type(2) { animation-delay: 0.12s; }
+    .card:nth-of-type(3) { animation-delay: 0.18s; }
+    .card:nth-of-type(4) { animation-delay: 0.24s; }
+    .card:nth-of-type(5) { animation-delay: 0.30s; }
+    .card:nth-of-type(6) { animation-delay: 0.36s; }
+    .card:nth-of-type(7) { animation-delay: 0.42s; }
+    .card:nth-of-type(8) { animation-delay: 0.48s; }
+    .card:nth-of-type(9) { animation-delay: 0.54s; }
+    .card:nth-of-type(10) { animation-delay: 0.60s; }
 
     .grid {
       display: grid;
@@ -122,12 +144,6 @@
       border-radius: 22px;
       border: 1px solid rgba(255,255,255,0.08);
       box-shadow: 0 14px 34px rgba(0,0,0,0.35);
-      transition: transform 0.35s ease, box-shadow 0.35s ease;
-    }
-
-    .hero-photo:hover {
-      transform: scale(1.02);
-      box-shadow: 0 18px 38px rgba(0,0,0,0.40);
     }
 
     .label {
@@ -189,17 +205,24 @@
     }
 
     .audit-image,
+    .promo-image,
+    .hero-photo {
+      transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.4s ease;
+      animation: softZoom 1s ease;
+    }
+
+    .audit-image,
     .promo-image {
       width: 100%;
       border-radius: 14px;
       border: 1px solid rgba(255,255,255,0.08);
-      transition: transform 0.35s ease, box-shadow 0.35s ease, opacity 0.35s ease;
       background: #0f172a;
     }
 
     .audit-image:hover,
-    .promo-image:hover {
-      transform: scale(1.02);
+    .promo-image:hover,
+    .hero-photo:hover {
+      transform: scale(1.03);
       box-shadow: 0 14px 30px rgba(0,0,0,0.32);
     }
 
@@ -215,10 +238,11 @@
       z-index: 1000;
       box-shadow: 0 8px 20px rgba(0,0,0,0.3);
       transition: transform 0.25s ease, box-shadow 0.25s ease;
+      animation: fadeUp 1.1s ease;
     }
 
     .floating:hover {
-      transform: translateY(-2px);
+      transform: translateY(-3px) scale(1.03);
       box-shadow: 0 12px 24px rgba(0,0,0,0.35);
     }
 
@@ -477,4 +501,4 @@
 </footer>
 
 </body>
-</html>
+    </html>
