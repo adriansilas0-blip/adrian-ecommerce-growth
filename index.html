@@ -123,6 +123,8 @@
     .card:nth-of-type(8) { animation-delay: 0.48s; }
     .card:nth-of-type(9) { animation-delay: 0.54s; }
     .card:nth-of-type(10) { animation-delay: 0.60s; }
+    .card:nth-of-type(11) { animation-delay: 0.66s; }
+    .card:nth-of-type(12) { animation-delay: 0.72s; }
 
     .grid {
       display: grid;
@@ -246,6 +248,16 @@
       box-shadow: 0 12px 24px rgba(0,0,0,0.35);
     }
 
+    .contact-link-card {
+      text-decoration: none;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .contact-link-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 30px rgba(0,0,0,0.25);
+    }
+
     footer {
       text-align: center;
       padding: 30px;
@@ -352,6 +364,27 @@
       <h2>Discuss your store</h2>
       <p>WhatsApp: +234 913 077 5567</p>
       <a class="btn" href="https://wa.me/2349130775567" target="_blank">Chat on WhatsApp</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <span class="label">Contact options</span>
+    <h2>Reach me on other platforms</h2>
+    <p style="margin-bottom:15px;">
+      For a quick store review, WhatsApp is the fastest way to reach me.
+      Other platforms are available below if preferred.
+    </p>
+
+    <div class="grid">
+      <a href="https://t.me/Silasadrian0" target="_blank" class="card contact-link-card" style="margin-bottom:0;">
+        <h3>Telegram</h3>
+        <p>@Silasadrian0</p>
+      </a>
+
+      <a href="https://discord.com/users/silasadrian0102" target="_blank" class="card contact-link-card" style="margin-bottom:0;">
+        <h3>Discord</h3>
+        <p>silasadrian0102</p>
+      </a>
     </div>
   </div>
 
@@ -501,4 +534,4 @@
 </footer>
 
 </body>
-    </html>
+  </html>
